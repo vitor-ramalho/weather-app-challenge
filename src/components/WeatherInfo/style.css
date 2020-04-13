@@ -1,0 +1,7 @@
+.weatherInfo{
+    padding: 20px 20px;
+    height: 100%;
+    width: 20%;
+    display: inline-block;
+    background-color: orange;
+}
