@@ -1,12 +1,14 @@
 import React from 'react';
 
+import './App.css'
+
 import Form from './components/Form/Form';
 import WeatherInfo from './components/WeatherInfo/WeatherInfo';
 //import CapitalsWeather from './components/CapitalsWeather/CapitalsWeather';
 
 const apiKey = "c2b903cdf326a8c09a4bd6f8b4dd4a8a";
 
-
+document.body.style = 'background: orange;';
 class App extends React.Component {
 
   state = {
@@ -39,7 +41,7 @@ class App extends React.Component {
         country: data.sys.country,
         humidity: data.main.humidity,
         climate: data.weather[0].main,
-        wind: data.wind.speed,
+        wind: data.wind.speed * 5,
         feels_like: data.main.feels_like - 273.15,
         description: data.weather[0].description,
         error: ""
@@ -64,7 +66,9 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <h1>Hello</h1>
+      <h1>Weather Finder!</h1>
+        <Form getWeather={this.getWeather} />
+
         <WeatherInfo
           temperature={this.state.temperature}
           city={this.state.city}
@@ -78,7 +82,6 @@ class App extends React.Component {
           climate={this.state.climate}
           error={this.state.error}
         />
-        <Form getWeather={this.getWeather} />
       </>
     )
   }

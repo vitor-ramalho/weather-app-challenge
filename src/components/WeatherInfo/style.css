@@ -1,7 +1,39 @@
-.weatherInfo{
-    padding: 20px 20px;
-    height: 100%;
-    width: 20%;
-    display: inline-block;
-    background-color: orange;
+
+.weather-info{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 20em;
+    padding: 30px 30px;
+    margin: 20px 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+
+.locationTitle{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tempTitle{
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+.descriptionList{
+    display: table;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+tr{
+    height: 40px;
+}
+td{
+    width: 50rem;
+}
+
+td span{
+    font-weight: 100;
 }

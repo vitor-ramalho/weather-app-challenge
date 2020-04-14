@@ -1,14 +1,18 @@
 import React from 'react';
+import SearchIcon from '@material-ui/icons/Search'
 
+import './style.css'
 
 class Form extends React.Component{
     render(){
         return(
+            <>
             <form onSubmit={this.props.getWeather}>
-                <input name="city" placeholder="Insira o nome da cidade aqui"/>
-                <input name="country" placeholder="Insira o nome do país aqui"/>
-                <button>Busque</button>
+                <input className="inputCity" name="city" placeholder="Cidade"/>
+                <input className="inputCountry" name="country" placeholder="País"/>
+                <button className="btnSubmit" type="submit"><SearchIcon/></button>
             </form>
+            </>
         );
     }
 }
